@@ -1,19 +1,19 @@
 body {
     font-family: "Poppins", sans-serif;
     margin: auto;
-    padding-top: 100px;
     box-sizing: border-box;
 
 }
 header {
     width: 100%;
-    background-color: #ad9e8a;
-    margin: 0; /* Remove margin to avoid shifting */
-    position: fixed; /* Fix the header to the top of the viewport */
-    top: 0; /* Position it at the top */
-    left: 0; /* Align to the left */
-    z-index: 1000; /* Ensure it appears above other elements */
+    background-color: rgba(68, 68, 67, 0.9); /* Semi-transparent background */
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
+
 
 .navbar {
     display: flex;
@@ -49,7 +49,7 @@ header {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-size: 1.2em;
 }
 
@@ -62,28 +62,31 @@ a:hover {
     margin-right: 20px;
 }
 
-/* Add padding to the top of the body to avoid content hiding behind the fixed header */
-body {
-    padding-top: 70px; /* Adjust based on your header height */
-}
-
 
 .hero {
-    padding: 100px 50px 40px 40px;
     display: flex;
-    flex-direction: row; /* Stack elements vertically */
-    background-color: #000;
+    flex-direction: row; /* Stack elements horizontally (row) */
+    background-image: url(assets/CustomWindowLandscape.jpeg);
+    background-size: cover; /* Make the image cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background-blend-mode: darken; /* Blend the background color with the image */
+    width: 100%;
+    height: 100vh; /* Set the height to 100% of the viewport */
     margin: auto;
     justify-content: center;
     align-items: center;
     text-align: center; /* Center the text */
 }
 
+
 .main-heading {
-    color: aliceblue;
+    color: #fff;
     max-width: 50%;
     font-size: 2rem;
     margin-bottom: 20px; /* Add some space below the heading */
+    z-index: 1;
 }
 
 .banner {
@@ -333,6 +336,10 @@ footer {
 
 /* Responsive Styles */
 @media only screen and (max-width: 768px) { 
+    body {
+        margin: auto;
+    }
+    
     #logo {
         display: flex;
         width: 150px;
@@ -343,9 +350,9 @@ footer {
         display: none;
         width: 50%;
         flex-direction: column;
-        background-color:#ad9e8a;
+        background-color: rgba(68, 68, 67, 0.9); /* Semi-transparent background */
         position: absolute;
-        top: 70%;
+        top: 100%;
         right: 0;
     }
 
@@ -371,7 +378,7 @@ footer {
     }
 
     .main-heading {
-        font-size: 1rem;
+        font-size: 1.8rem;
         width: 100%;
     }
 
@@ -468,7 +475,7 @@ footer {
 
 @media (max-width: 480px) {
     .main-heading {
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
 
     img {
