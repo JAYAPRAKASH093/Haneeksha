@@ -339,7 +339,7 @@ footer {
     body {
         margin: auto;
     }
-    
+
     #logo {
         display: flex;
         width: 150px;
@@ -476,6 +476,12 @@ footer {
 @media (max-width: 480px) {
     .main-heading {
         font-size: 1.8rem;
+    }
+    
+    #logo {
+        display: flex;
+        width: 130px;
+        border-radius: 10px;
     }
 
     img {
